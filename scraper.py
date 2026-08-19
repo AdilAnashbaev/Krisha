@@ -75,15 +75,18 @@ class KrishaClient:
         })
 
     def get(self, url, params=None):
-        for attempt in range(3):
+        # Короткий таймаут и всего 2 попытки: если krisha.kz блокирует
+        # соединение (а не отвечает ошибкой), долгие повторные попытки
+        # только впустую тратят время прогона.
+        for attempt in range(2):
             try:
-                resp = self.session.get(url, params=params, timeout=20)
+                resp = self.session.get(url, params=params, timeout=10)
                 if resp.status_code == 200:
                     return resp.text
                 log(f"  HTTP {resp.status_code} for {url} (попытка {attempt + 1})")
             except requests.RequestException as e:
                 log(f"  Ошибка запроса: {e} (попытка {attempt + 1})")
-            time.sleep(3 * (attempt + 1))
+            time.sleep(2 * (attempt + 1))
         return None
 
 
@@ -373,13 +376,28 @@ def run():
 
     mkr_allowlist = [m.lower() for m in cfg["mkr_allowlist"]]
     final_matches = []
+    blocked = False
+    consecutive_failures = 0
+    max_consecutive_failures = 5
 
     for i, (ad_id, card) in enumerate(all_candidates.items(), 1):
+        if blocked:
+            break
         log(f"[{i}/{len(all_candidates)}] Проверяю объявление {ad_id}")
         detail_html = client.get(card["url"])
         time.sleep(cfg.get("detail_request_delay_seconds", 2.0))
         if not detail_html:
+            consecutive_failures += 1
+            if consecutive_failures >= max_consecutive_failures:
+                log(
+                    f"  {consecutive_failures} подряд неудачных запросов — похоже, "
+                    "krisha.kz временно блокирует соединения с этого сервера. "
+                    "Останавливаю проверку деталей на этом прогоне, чтобы не тратить "
+                    "время впустую. Список объявлений, кандидатов и статус запишу как есть."
+                )
+                blocked = True
             continue
+        consecutive_failures = 0
 
         analysis = analyze_detail(detail_html, cfg)
         district_and_body = (card["district_line"] + " " + analysis["full_text_lower"]).lower()
@@ -421,6 +439,13 @@ def run():
             log(f"    Не подходит: {', '.join(failed)}")
 
     log(f"Итоговых совпадений: {len(final_matches)}")
+    if blocked:
+        log(
+            "ВНИМАНИЕ: прогон остановлен досрочно из-за повторяющихся сетевых "
+            "ошибок при обращении к krisha.kz — часть кандидатов не была "
+            "проверена. Возможно, сайт временно блокирует запросы с сервера "
+            "GitHub Actions."
+        )
 
     seen_ids = set(load_json(SEEN_PATH, []))
     new_ids = [m["id"] for m in final_matches if m["id"] not in seen_ids]
@@ -433,6 +458,7 @@ def run():
             "price_to": cfg["price_to"],
             "districts": cfg["district_slugs"],
         },
+        "blocked_early": blocked,
         "count": len(final_matches),
         "listings": sorted(final_matches, key=lambda m: m["price"]),
     }
