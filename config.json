@@ -1,0 +1,38 @@
+{
+  "district_slugs": [
+    "almaty-medeuskij"
+  ],
+  "mkr_allowlist": [
+    "коктобе",
+    "горный гигант",
+    "каменское плато",
+    "тау самал",
+    "алатау",
+    "ияф",
+    "бутаковка",
+    "думан",
+    "кольсай",
+    "кенсай",
+    "родники",
+    "аскартау"
+  ],
+  "geo_boundary_lat": 43.2432,
+  "geo_boundary_note": "Широта перекрёстка Абая/Достык. Юг = меньше этого значения = 'выше' в горы.",
+  "geo_filter_mode": "either",
+  "rooms_allowed": [
+    5,
+    6
+  ],
+  "price_from": 100000000,
+  "price_to": 140000000,
+  "require_single_floor": true,
+  "require_fresh_renovation": true,
+  "require_central_heating": true,
+  "require_central_sewerage": true,
+  "require_central_water": true,
+  "require_photos": true,
+  "max_pages_per_district": 3,
+  "request_delay_seconds": 0,
+  "detail_request_delay_seconds": 0,
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+}
