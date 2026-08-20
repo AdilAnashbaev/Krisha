@@ -148,6 +148,15 @@
   }
   .empty svg{ opacity:.5; margin-bottom:14px; }
   .empty p{ font-size:14px; line-height:1.6; margin:0; }
+  .footer-credit{
+    text-align:center;
+    padding: 18px 20px 28px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    letter-spacing:.04em;
+    color: var(--text-dim);
+    opacity:.7;
+  }
   .loading{ text-align:center; padding:60px 20px; color:var(--text-dim); font-family:'IBM Plex Mono',monospace; font-size:12px; }
 </style>
 </head>
@@ -171,9 +180,12 @@
   </svg>
 </div>
 
+
 <main id="main">
   <div class="loading">Загружаю список…</div>
 </main>
+
+<p class="footer-credit">разработано Адилем Анашбаевым</p>
 
 <script>
   if (window.Telegram && window.Telegram.WebApp) {
