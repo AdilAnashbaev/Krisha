@@ -159,8 +159,8 @@
   <p class="criteria">
     <b id="c-rooms">5–6</b> комнат ·
     <b id="c-price">100–140 млн ₸</b> ·
-    1 этаж · свежий ремонт ·
-    центральные тепло / вода / канализация
+    1–2 этажа · от 170 м² · свежий ремонт ·
+    отопление центральное/газ · канализация центральная
   </p>
   <div class="meta-row">
     <span id="updated-at">обновляется…</span>
@@ -209,9 +209,12 @@
     const tags = [];
     if (listing.checks) {
       if (listing.checks.fresh_renovation) tags.push('свежий ремонт');
-      if (listing.checks.central_heating) tags.push('центр. отопление');
+      if (listing.checks.heating) tags.push('отопление центр./газ');
       if (listing.checks.central_water) tags.push('центр. водоснабжение');
       if (listing.checks.central_sewerage) tags.push('центр. канализация');
+    }
+    if (listing.region) {
+      tags.push(listing.region === 'besagash' ? 'Бесагаш' : 'Медеу');
     }
 
     const photoHtml = listing.photo_url
