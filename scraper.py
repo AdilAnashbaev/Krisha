@@ -25,6 +25,7 @@ import json
 import os
 import re
 import sys
+import html
 import time
 from pathlib import Path
 from urllib.parse import urlencode
@@ -516,21 +517,29 @@ def notify_telegram(new_matches):
         log("TELEGRAM_BOT_TOKEN / TELEGRAM_CHAT_ID не заданы — пропускаю уведомление.")
         return
 
-    lines = [f"🏡 Найдено новых домов по критериям: {len(new_matches)}\n"]
-    for m in new_matches[:10]:
+    lines = [f"🏡 <b>Найдено новых домов: {len(new_matches)}</b>"]
+    for i, m in enumerate(new_matches[:10], 1):
         area_str = f", {m['area_m2']:.0f} м²" if m.get('area_m2') else ""
-        lines.append(
-            f"• {m['rooms']} комн., {format_price(m['price'])}{area_str}"
-            f"\n  {m['district_line'] or ''}\n  {m['url']}"
-        )
+        district = m.get('district_line') or ('Бесагаш' if m.get('region') == 'besagash' else '')
+        lines.append("")
+        lines.append(f"{i}. {m['rooms']} комн., {format_price(m['price'])}{area_str}")
+        if district:
+            lines.append(html.escape(district))
+        lines.append(f'<a href="{html.escape(m["url"])}">Открыть на Krisha →</a>')
     if len(new_matches) > 10:
-        lines.append(f"\n… и ещё {len(new_matches) - 10}. Полный список — в приложении.")
+        lines.append("")
+        lines.append(f"… и ещё {len(new_matches) - 10}. Полный список — в приложении.")
     text = "\n".join(lines)
 
     try:
         resp = requests.post(
             f"https://api.telegram.org/bot{token}/sendMessage",
-            json={"chat_id": chat_id, "text": text, "disable_web_page_preview": True},
+            json={
+                "chat_id": chat_id,
+                "text": text,
+                "parse_mode": "HTML",
+                "disable_web_page_preview": True,
+            },
             timeout=15,
         )
         if resp.status_code != 200:
