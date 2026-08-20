@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-20T03:41:23+05:00",
+  "generated_at": "2026-08-20T04:56:54+05:00",
   "criteria": {
     "rooms": [
       5,
@@ -7,11 +7,153 @@
     ],
     "price_from": 100000000,
     "price_to": 140000000,
+    "floors_allowed": [
+      1,
+      2
+    ],
+    "min_area_m2": 170,
     "districts": [
-      "almaty-medeuskij"
+      "almaty-medeuskij",
+      "besagash-dzerzhinskoe"
     ]
   },
-  "blocked_early": true,
-  "count": 0,
-  "listings": []
+  "blocked_early": false,
+  "count": 5,
+  "listings": [
+    {
+      "id": "1014428826",
+      "url": "https://krisha.kz/a/show/1014428826",
+      "title": "6-комнатный дом",
+      "price": 100000000,
+      "rooms": 6,
+      "area_m2": 180.0,
+      "plot_sotka": 6.7,
+      "floors": 2,
+      "district_line": "Медеуский р-н, Сазановская",
+      "region": "medeu",
+      "photo_url": "https://krisha-photos.kcdn.online/webp/65/6504ceec-b17d-4039-9f0b-f966f633b66a/12-800x600.jpg",
+      "lat": 43.284537444567,
+      "lon": 76.972175210827,
+      "checks": {
+        "rooms": true,
+        "price": true,
+        "floors": true,
+        "min_area": true,
+        "fresh_renovation": true,
+        "heating": true,
+        "central_sewerage": true,
+        "central_water": true,
+        "has_photos": true,
+        "geo_area": true
+      }
+    },
+    {
+      "id": "691011645",
+      "url": "https://krisha.kz/a/show/691011645",
+      "title": "5-комнатный дом",
+      "price": 115000000,
+      "rooms": 5,
+      "area_m2": 180.0,
+      "plot_sotka": 8.0,
+      "floors": 1,
+      "district_line": "",
+      "region": "medeu",
+      "photo_url": "https://krisha-photos.kcdn.online/webp/57/57bdc547-3b87-4825-81ba-440d0ab82e87/26-800x600.jpg",
+      "lat": 43.283094,
+      "lon": 76.997523,
+      "checks": {
+        "rooms": true,
+        "price": true,
+        "floors": true,
+        "min_area": true,
+        "fresh_renovation": true,
+        "heating": true,
+        "central_sewerage": true,
+        "central_water": true,
+        "has_photos": true,
+        "geo_area": true
+      }
+    },
+    {
+      "id": "1006000439",
+      "url": "https://krisha.kz/a/show/1006000439",
+      "title": "6-комнатный дом",
+      "price": 120000000,
+      "rooms": 6,
+      "area_m2": 220.0,
+      "plot_sotka": 4.0,
+      "floors": 2,
+      "district_line": "",
+      "region": "medeu",
+      "photo_url": "https://krisha-photos.kcdn.online/webp/ca/ca8164b6-1576-47eb-8e09-0ecdb926a620/1-800x600.jpg",
+      "lat": 43.288174,
+      "lon": 77.002616,
+      "checks": {
+        "rooms": true,
+        "price": true,
+        "floors": true,
+        "min_area": true,
+        "fresh_renovation": true,
+        "heating": true,
+        "central_sewerage": true,
+        "central_water": true,
+        "has_photos": true,
+        "geo_area": true
+      }
+    },
+    {
+      "id": "1007924612",
+      "url": "https://krisha.kz/a/show/1007924612",
+      "title": "6-комнатный дом",
+      "price": 125000000,
+      "rooms": 6,
+      "area_m2": 220.0,
+      "plot_sotka": 4.0,
+      "floors": 2,
+      "district_line": "",
+      "region": "medeu",
+      "photo_url": "https://krisha-photos.kcdn.online/webp/32/321ab509-cc33-41ab-a40b-200689b4bef8/19-800x600.jpg",
+      "lat": 43.27968020263,
+      "lon": 77.007773939481,
+      "checks": {
+        "rooms": true,
+        "price": true,
+        "floors": true,
+        "min_area": true,
+        "fresh_renovation": true,
+        "heating": true,
+        "central_sewerage": true,
+        "central_water": true,
+        "has_photos": true,
+        "geo_area": true
+      }
+    },
+    {
+      "id": "1012625545",
+      "url": "https://krisha.kz/a/show/1012625545",
+      "title": "5-комнатный дом",
+      "price": 140000000,
+      "rooms": 5,
+      "area_m2": 232.8,
+      "plot_sotka": 9.5,
+      "floors": 2,
+      "district_line": "",
+      "region": "medeu",
+      "photo_url": "https://krisha-photos.kcdn.online/webp/e0/e0a51d16-2bc4-4851-b5ed-77cd76e96c5f/1-800x600.jpg",
+      "lat": 43.284932708033,
+      "lon": 77.013814505708,
+      "checks": {
+        "rooms": true,
+        "price": true,
+        "floors": true,
+        "min_area": true,
+        "fresh_renovation": true,
+        "heating": true,
+        "central_sewerage": true,
+        "central_water": true,
+        "has_photos": true,
+        "geo_area": true
+      }
+    }
+  ]
 }
