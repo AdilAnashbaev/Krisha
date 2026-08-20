@@ -2,8 +2,10 @@
 # -*- coding: utf-8 -*-
 """
 Krisha.kz watcher — ищет дома на продажу под конкретные критерии
-(район выше Абая/Достык, 5-6 комнат, 100-140 млн тг, свежий ремонт,
-1 этаж, центральные коммуникации, фото есть) и пишет data/listings.json.
+(район выше Абая/Достык + Бесагаш не дальше ЖК Hayat Apartments,
+5-6 комнат, 100-140 млн тг, свежий ремонт, 1-2 этажа, от 170 м²,
+отопление центральное или газовое, канализация центральная, фото
+есть) и пишет data/listings.json.
 
 Запускается вручную (`python scraper.py`) или по расписанию через
 GitHub Actions (.github/workflows/daily-scan.yml).
@@ -294,6 +296,11 @@ def analyze_detail(detail_html, cfg):
         check_keyword(text_lower, ["центральное отопление"])
         or check_proximity(text_lower, ["отопление"], "централь")
     )
+    gas_heating = (
+        check_keyword(text_lower, ["отопление: на газе", "отопление на газе", "газовое отопление"])
+        or check_proximity(text_lower, ["отопление"], "газ")
+    )
+    heating_ok = central_heating or gas_heating
     central_sewerage = (
         check_keyword(text_lower, ["центральная канализация", "центральное канализация"])
         or check_proximity(text_lower, ["канализация"], "централь")
@@ -310,6 +317,8 @@ def analyze_detail(detail_html, cfg):
         "floors": floors,
         "fresh_renovation": fresh_renovation,
         "central_heating": central_heating,
+        "gas_heating": gas_heating,
+        "heating_ok": heating_ok,
         "central_sewerage": central_sewerage,
         "central_water": central_water,
         "has_photos": photos_ok,
@@ -320,17 +329,30 @@ def analyze_detail(detail_html, cfg):
     }
 
 
-def geo_ok(mkr_hit, lat, cfg):
-    boundary = cfg["geo_boundary_lat"]
-    mode = cfg.get("geo_filter_mode", "either")
-    coord_hit = (lat is not None and lat <= boundary)
-    if mode == "both":
-        if lat is None:
-            # нет координат — доверяем только списку микрорайонов
-            return mkr_hit
-        return mkr_hit and coord_hit
-    # "either" (по умолчанию): совпадение по любому из двух сигналов
-    return mkr_hit or coord_hit
+def geo_ok(region, mkr_hit, lat, lon):
+    """Проверка гео-критерия — правило зависит от региона:
+    - район Медеу: попадание в список микрорайонов ИЛИ широта южнее
+      (= выше в горы) линии Абая/Достык;
+    - Бесагаш: долгота не дальше опорной точки (ЖК Hayat Apartments) —
+      то есть не глубже в посёлок, чем этот комплекс.
+    Если нужных координат нет — по умолчанию считаем, что подходит
+    (единственный сигнал в этом случае — сам район/мкр), чтобы не
+    терять объявления только из-за того, что не удалось вытащить
+    координаты со страницы."""
+    if "mkr_allowlist" in region:
+        boundary = region["lat_max"]
+        mode = region.get("geo_filter_mode", "either")
+        coord_hit = (lat is not None and lat <= boundary)
+        if mode == "both":
+            if lat is None:
+                return mkr_hit
+            return mkr_hit and coord_hit
+        return mkr_hit or coord_hit
+    if "lon_max" in region:
+        if lon is None:
+            return True
+        return lon <= region["lon_max"]
+    return True
 
 
 def scan_district(client, cfg, district_slug):
@@ -365,22 +387,24 @@ def run():
     cfg = load_config()
     client = KrishaClient(cfg)
 
+    # all_candidates: ad_id -> (card, region)
     all_candidates = {}
-    for slug in cfg["district_slugs"]:
+    for region in cfg["regions"]:
+        slug = region["district_slug"]
         log(f"Сканирую район: {slug}")
         found = scan_district(client, cfg, slug)
         log(f"  Кандидатов после грубого фильтра (комнаты/цена): {len(found)}")
-        all_candidates.update(found)
+        for ad_id, card in found.items():
+            all_candidates[ad_id] = (card, region)
 
     log(f"Всего кандидатов на детальную проверку: {len(all_candidates)}")
 
-    mkr_allowlist = [m.lower() for m in cfg["mkr_allowlist"]]
     final_matches = []
     blocked = False
     consecutive_failures = 0
     max_consecutive_failures = 5
 
-    for i, (ad_id, card) in enumerate(all_candidates.items(), 1):
+    for i, (ad_id, (card, region)) in enumerate(all_candidates.items(), 1):
         if blocked:
             break
         log(f"[{i}/{len(all_candidates)}] Проверяю объявление {ad_id}")
@@ -401,23 +425,30 @@ def run():
 
         analysis = analyze_detail(detail_html, cfg)
         district_and_body = (card["district_line"] + " " + analysis["full_text_lower"]).lower()
-        mkr_hit = mkr_matches(district_and_body, mkr_allowlist)
+        mkr_allowlist = [m.lower() for m in region.get("mkr_allowlist", [])]
+        mkr_hit = mkr_matches(district_and_body, mkr_allowlist) if mkr_allowlist else False
 
         floors = analysis["floors"] if analysis["floors"] is not None else card["floors_summary"]
+        area_ok = (
+            card["area_m2"] is not None
+            and card["area_m2"] >= cfg.get("min_area_m2", 0)
+        )
 
         checks = {
             "rooms": card["rooms"] in cfg["rooms_allowed"],
             "price": cfg["price_from"] <= card["price"] <= cfg["price_to"],
-            "single_floor": (not cfg["require_single_floor"]) or (floors == 1),
+            "floors": (floors is not None) and (floors in cfg["floors_allowed"]),
+            "min_area": area_ok,
             "fresh_renovation": (not cfg["require_fresh_renovation"]) or analysis["fresh_renovation"],
-            "central_heating": (not cfg["require_central_heating"]) or analysis["central_heating"],
+            "heating": (not cfg["require_heating_gas_or_central"]) or analysis["heating_ok"],
             "central_sewerage": (not cfg["require_central_sewerage"]) or analysis["central_sewerage"],
-            "central_water": (not cfg["require_central_water"]) or analysis["central_water"],
+            "central_water": analysis["central_water"],  # информационно, не влияет на итог
             "has_photos": (not cfg["require_photos"]) or analysis["has_photos"],
-            "geo_area": geo_ok(mkr_hit, analysis["lat"], cfg),
+            "geo_area": geo_ok(region, mkr_hit, analysis["lat"], analysis["lon"]),
         }
+        required_keys = [k for k in checks if k != "central_water"]
 
-        if all(checks.values()):
+        if all(checks[k] for k in required_keys):
             title_area = f'{card["rooms"]}-комнатный дом'
             final_matches.append({
                 "id": ad_id,
@@ -429,13 +460,14 @@ def run():
                 "plot_sotka": card["plot_sotka"],
                 "floors": floors,
                 "district_line": card["district_line"],
+                "region": region.get("name", region["district_slug"]),
                 "photo_url": analysis["photo_url"],
                 "lat": analysis["lat"],
                 "lon": analysis["lon"],
                 "checks": checks,
             })
         else:
-            failed = [k for k, v in checks.items() if not v]
+            failed = [k for k in required_keys if not checks[k]]
             log(f"    Не подходит: {', '.join(failed)}")
 
     log(f"Итоговых совпадений: {len(final_matches)}")
@@ -456,7 +488,9 @@ def run():
             "rooms": cfg["rooms_allowed"],
             "price_from": cfg["price_from"],
             "price_to": cfg["price_to"],
-            "districts": cfg["district_slugs"],
+            "floors_allowed": cfg["floors_allowed"],
+            "min_area_m2": cfg.get("min_area_m2", 0),
+            "districts": [r["district_slug"] for r in cfg["regions"]],
         },
         "blocked_early": blocked,
         "count": len(final_matches),
