@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-21T03:52:18+05:00",
+  "generated_at": "2026-08-22T03:43:18+05:00",
   "criteria": {
     "rooms": [
       5,
@@ -18,7 +18,7 @@
     ]
   },
   "blocked_early": false,
-  "count": 5,
+  "count": 6,
   "listings": [
     {
       "id": "1014428826",
@@ -142,6 +142,33 @@
       "photo_url": "https://krisha-photos.kcdn.online/webp/e0/e0a51d16-2bc4-4851-b5ed-77cd76e96c5f/1-800x600.jpg",
       "lat": 43.284932708033,
       "lon": 77.013814505708,
+      "checks": {
+        "rooms": true,
+        "price": true,
+        "floors": true,
+        "min_area": true,
+        "fresh_renovation": true,
+        "heating": true,
+        "central_sewerage": true,
+        "central_water": true,
+        "has_photos": true,
+        "geo_area": true
+      }
+    },
+    {
+      "id": "1012628055",
+      "url": "https://krisha.kz/a/show/1012628055",
+      "title": "6-комнатный дом",
+      "price": 140000000,
+      "rooms": 6,
+      "area_m2": 180.0,
+      "plot_sotka": 8.0,
+      "floors": 2,
+      "district_line": "",
+      "region": "medeu",
+      "photo_url": "https://krisha-photos.kcdn.online/webp/b0/b008790f-2d5f-4407-8e7b-d3a369407d86/1-800x600.jpg",
+      "lat": 43.27768944859,
+      "lon": 76.998247035825,
       "checks": {
         "rooms": true,
         "price": true,
