@@ -103,7 +103,8 @@ def build_search_params(cfg, page):
     # равно перепроверяются по тексту ниже — так что это только
     # оптимизация, а не единственный источник фильтрации.
     params = {}
-    params["das[house.type_object]"] = 1  # Отдельный дом
+    if cfg.get("type_object"):
+        params["das[house.type_object]"] = cfg["type_object"]  # 1 = только отдельный дом
     for i, room in enumerate(cfg["rooms_allowed"]):
         params[f"das[live.rooms][{i}]"] = room
     params["das[price][from]"] = cfg["price_from"]
@@ -310,6 +311,11 @@ def analyze_detail(detail_html, cfg):
         check_keyword(text_lower, ["центральное водоснабжение"])
         or check_proximity(text_lower, ["водоснабжение", "питьевая вода"], "централь")
     )
+    brick_material = (
+        check_keyword(text_lower, ["материал постройки: кирпич", "материал: кирпич", "стены: кирпич"])
+        or check_proximity(text_lower, ["материал"], "кирпич")
+        or "кирпич" in text_lower
+    )
     photos_ok = has_photos(detail_html)
     photo_url = extract_photo_url(detail_html)
     lat, lon = extract_lat_lon(detail_html)
@@ -322,6 +328,7 @@ def analyze_detail(detail_html, cfg):
         "heating_ok": heating_ok,
         "central_sewerage": central_sewerage,
         "central_water": central_water,
+        "brick_material": brick_material,
         "has_photos": photos_ok,
         "photo_url": photo_url,
         "lat": lat,
@@ -443,6 +450,7 @@ def run():
             "fresh_renovation": (not cfg["require_fresh_renovation"]) or analysis["fresh_renovation"],
             "heating": (not cfg["require_heating_gas_or_central"]) or analysis["heating_ok"],
             "central_sewerage": (not cfg["require_central_sewerage"]) or analysis["central_sewerage"],
+            "brick_material": (not cfg.get("require_brick_material")) or analysis["brick_material"],
             "central_water": analysis["central_water"],  # информационно, не влияет на итог
             "has_photos": (not cfg["require_photos"]) or analysis["has_photos"],
             "geo_area": geo_ok(region, mkr_hit, analysis["lat"], analysis["lon"]),
