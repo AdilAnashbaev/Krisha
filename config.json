@@ -2,36 +2,24 @@
   "regions": [
     {
       "name": "medeu",
-      "district_slug": "almaty-medeuskij",
-      "mkr_allowlist": [
-        "коктобе",
-        "горный гигант",
-        "каменское плато",
-        "тау самал",
-        "алатау",
-        "ияф",
-        "бутаковка",
-        "думан",
-        "кольсай",
-        "кенсай",
-        "родники",
-        "аскартау"
-      ],
-      "lat_max": 43.2432,
-      "geo_filter_mode": "either"
+      "district_slug": "almaty-medeuskij"
+    },
+    {
+      "name": "turksib",
+      "district_slug": "almaty-turksibskij"
     },
     {
       "name": "besagash",
-      "district_slug": "besagash-dzerzhinskoe",
-      "lon_max": 77.0210,
-      "geo_note": "Долгота ЖК Hayat Apartments (~77.0202) — не дальше вглубь посёлка от этой точки."
+      "district_slug": "besagash-dzerzhinskoe"
     }
   ],
+  "type_object": null,
   "rooms_allowed": [5, 6],
-  "price_from": 100000000,
-  "price_to": 140000000,
+  "price_from": 0,
+  "price_to": 130000000,
   "floors_allowed": [1, 2],
   "min_area_m2": 170,
+  "require_brick_material": true,
   "require_fresh_renovation": true,
   "require_heating_gas_or_central": true,
   "require_central_sewerage": true,
