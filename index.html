@@ -164,11 +164,11 @@
 
 <div class="ridge">
   <p class="eyebrow">krisha.kz · ежедневный обход</p>
-  <h1>Дома выше<br>Абая — Достык</h1>
+  <h1>Медеу · Турксиб<br>Бесагаш</h1>
   <p class="criteria">
     <b id="c-rooms">5–6</b> комнат ·
-    <b id="c-price">100–140 млн ₸</b> ·
-    1–2 этажа · от 170 м² · свежий ремонт ·
+    <b id="c-price">до 130 млн ₸</b> ·
+    1–2 этажа · от 170 м² · кирпич · свежий ремонт ·
     отопление центральное/газ · канализация центральная
   </p>
   <div class="meta-row">
@@ -220,13 +220,15 @@
 
     const tags = [];
     if (listing.checks) {
+      if (listing.checks.brick_material) tags.push('кирпич');
       if (listing.checks.fresh_renovation) tags.push('свежий ремонт');
       if (listing.checks.heating) tags.push('отопление центр./газ');
       if (listing.checks.central_water) tags.push('центр. водоснабжение');
       if (listing.checks.central_sewerage) tags.push('центр. канализация');
     }
+    const regionNames = { medeu: 'Медеу', turksib: 'Турксиб', besagash: 'Бесагаш' };
     if (listing.region) {
-      tags.push(listing.region === 'besagash' ? 'Бесагаш' : 'Медеу');
+      tags.push(regionNames[listing.region] || listing.region);
     }
 
     const photoHtml = listing.photo_url
@@ -268,9 +270,10 @@
       document.getElementById('count-badge').textContent = (data.count || 0) + ' найдено';
       if (data.criteria) {
         if (data.criteria.rooms) document.getElementById('c-rooms').textContent = data.criteria.rooms.join('–');
-        if (data.criteria.price_from && data.criteria.price_to) {
-          document.getElementById('c-price').textContent =
-            Math.round(data.criteria.price_from/1e6) + '–' + Math.round(data.criteria.price_to/1e6) + ' млн ₸';
+        if (data.criteria.price_to != null) {
+          const from = data.criteria.price_from;
+          document.getElementById('c-price').textContent = (from ? Math.round(from/1e6) + '–' : 'до ')
+            + Math.round(data.criteria.price_to/1e6) + ' млн ₸';
         }
       }
 
