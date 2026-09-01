@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-01T03:20:15+05:00",
+  "generated_at": "2026-09-01T08:40:23+05:00",
   "criteria": {
     "rooms": [
       5,
@@ -19,7 +19,7 @@
     ]
   },
   "blocked_early": false,
-  "count": 29,
+  "count": 30,
   "listings": [
     {
       "id": "691165541",
@@ -63,6 +63,34 @@
       "photo_url": "https://krisha-photos.kcdn.online/webp/0d/0d5ae52e-a02f-4d2b-b062-739e15355880/1-800x600.jpg",
       "lat": 43.326289,
       "lon": 76.994774,
+      "checks": {
+        "rooms": true,
+        "price": true,
+        "floors": true,
+        "min_area": true,
+        "fresh_renovation": true,
+        "heating": true,
+        "central_sewerage": true,
+        "brick_material": true,
+        "central_water": true,
+        "has_photos": true,
+        "geo_area": true
+      }
+    },
+    {
+      "id": "1014300281",
+      "url": "https://krisha.kz/a/show/1014300281",
+      "title": "5-комнатный дом",
+      "price": 70000000,
+      "rooms": 5,
+      "area_m2": 268.8,
+      "plot_sotka": 10.0,
+      "floors": 2,
+      "district_line": "",
+      "region": "besagash",
+      "photo_url": "https://krisha-photos.kcdn.online/webp/73/73d7096c-8253-4c99-8c8b-f76d779796b3/3-800x600.jpg",
+      "lat": 43.28969,
+      "lon": 77.038342,
       "checks": {
         "rooms": true,
         "price": true,
@@ -358,34 +386,6 @@
       }
     },
     {
-      "id": "1002099226",
-      "url": "https://krisha.kz/a/show/1002099226",
-      "title": "5-комнатный дом",
-      "price": 105000000,
-      "rooms": 5,
-      "area_m2": 191.0,
-      "plot_sotka": 4.4,
-      "floors": 1,
-      "district_line": "Турксибский р-н, Воровского",
-      "region": "turksib",
-      "photo_url": "https://krisha-photos.kcdn.online/webp/64/64dc125a-3e58-46d2-944d-a2768c1a624a/15-800x600.jpg",
-      "lat": 43.353086,
-      "lon": 76.950657,
-      "checks": {
-        "rooms": true,
-        "price": true,
-        "floors": true,
-        "min_area": true,
-        "fresh_renovation": true,
-        "heating": true,
-        "central_sewerage": true,
-        "brick_material": true,
-        "central_water": true,
-        "has_photos": true,
-        "geo_area": true
-      }
-    },
-    {
       "id": "1009711683",
       "url": "https://krisha.kz/a/show/1009711683",
       "title": "5-комнатный дом",
@@ -453,6 +453,34 @@
       "district_line": "Турксибский р-н, Воровского",
       "region": "turksib",
       "photo_url": "https://krisha-photos.kcdn.online/webp/d2/d2daabd4-bb52-47f8-8610-88ac397c1273/27-800x600.jpg",
+      "lat": 43.353086,
+      "lon": 76.950657,
+      "checks": {
+        "rooms": true,
+        "price": true,
+        "floors": true,
+        "min_area": true,
+        "fresh_renovation": true,
+        "heating": true,
+        "central_sewerage": true,
+        "brick_material": true,
+        "central_water": true,
+        "has_photos": true,
+        "geo_area": true
+      }
+    },
+    {
+      "id": "1002099226",
+      "url": "https://krisha.kz/a/show/1002099226",
+      "title": "5-комнатный дом",
+      "price": 105000000,
+      "rooms": 5,
+      "area_m2": 191.0,
+      "plot_sotka": 4.4,
+      "floors": 1,
+      "district_line": "Турксибский р-н, Воровского",
+      "region": "turksib",
+      "photo_url": "https://krisha-photos.kcdn.online/webp/64/64dc125a-3e58-46d2-944d-a2768c1a624a/15-800x600.jpg",
       "lat": 43.353086,
       "lon": 76.950657,
       "checks": {
