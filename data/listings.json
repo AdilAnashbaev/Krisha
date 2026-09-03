@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-02T08:01:28+05:00",
+  "generated_at": "2026-09-03T08:05:15+05:00",
   "criteria": {
     "rooms": [
       5,
@@ -19,7 +19,7 @@
     ]
   },
   "blocked_early": false,
-  "count": 32,
+  "count": 28,
   "listings": [
     {
       "id": "691165541",
@@ -302,34 +302,6 @@
       }
     },
     {
-      "id": "1014719676",
-      "url": "https://krisha.kz/a/show/1014719676",
-      "title": "5-комнатный дом",
-      "price": 100000000,
-      "rooms": 5,
-      "area_m2": 180.0,
-      "plot_sotka": 10.0,
-      "floors": 2,
-      "district_line": "Турксибский р-н, мкр Альмерек",
-      "region": "turksib",
-      "photo_url": "https://krisha-photos.kcdn.online/webp/da/dae76120-0e99-47d3-a0aa-3b10ea4d5aaf/1-800x600.jpg",
-      "lat": 43.378233,
-      "lon": 77.00903,
-      "checks": {
-        "rooms": true,
-        "price": true,
-        "floors": true,
-        "min_area": true,
-        "fresh_renovation": true,
-        "heating": true,
-        "central_sewerage": true,
-        "brick_material": true,
-        "central_water": true,
-        "has_photos": true,
-        "geo_area": true
-      }
-    },
-    {
       "id": "697949803",
       "url": "https://krisha.kz/a/show/697949803",
       "title": "5-комнатный дом",
@@ -554,34 +526,6 @@
       }
     },
     {
-      "id": "1008406898",
-      "url": "https://krisha.kz/a/show/1008406898",
-      "title": "6-комнатный дом",
-      "price": 117000000,
-      "rooms": 6,
-      "area_m2": 210.0,
-      "plot_sotka": 4.1,
-      "floors": 2,
-      "district_line": "Медеуский р-н, Тюленина",
-      "region": "medeu",
-      "photo_url": "https://krisha-photos.kcdn.online/webp/2f/2f31a756-83e1-4c4e-aad5-d2ec66855498/3-800x600.jpg",
-      "lat": 43.277804,
-      "lon": 76.971579,
-      "checks": {
-        "rooms": true,
-        "price": true,
-        "floors": true,
-        "min_area": true,
-        "fresh_renovation": true,
-        "heating": true,
-        "central_sewerage": true,
-        "brick_material": true,
-        "central_water": true,
-        "has_photos": true,
-        "geo_area": true
-      }
-    },
-    {
       "id": "1010990593",
       "url": "https://krisha.kz/a/show/1010990593",
       "title": "6-комнатный дом",
@@ -595,34 +539,6 @@
       "photo_url": "https://krisha-photos.kcdn.online/webp/a2/a2401825-e548-43f4-9fe7-fe99c4b47beb/8-800x600.jpg",
       "lat": 43.33486,
       "lon": 76.995771,
-      "checks": {
-        "rooms": true,
-        "price": true,
-        "floors": true,
-        "min_area": true,
-        "fresh_renovation": true,
-        "heating": true,
-        "central_sewerage": true,
-        "brick_material": true,
-        "central_water": true,
-        "has_photos": true,
-        "geo_area": true
-      }
-    },
-    {
-      "id": "1006000439",
-      "url": "https://krisha.kz/a/show/1006000439",
-      "title": "6-комнатный дом",
-      "price": 120000000,
-      "rooms": 6,
-      "area_m2": 220.0,
-      "plot_sotka": 4.0,
-      "floors": 2,
-      "district_line": "",
-      "region": "medeu",
-      "photo_url": "https://krisha-photos.kcdn.online/webp/ca/ca8164b6-1576-47eb-8e09-0ecdb926a620/1-800x600.jpg",
-      "lat": 43.288174,
-      "lon": 77.002616,
       "checks": {
         "rooms": true,
         "price": true,
@@ -763,34 +679,6 @@
       "photo_url": "https://krisha-photos.kcdn.online/webp/6e/6e1bf94d-4e28-4adf-98c7-ee8cfdf1bd74/1-800x600.jpg",
       "lat": 43.369683730595,
       "lon": 77.009117126382,
-      "checks": {
-        "rooms": true,
-        "price": true,
-        "floors": true,
-        "min_area": true,
-        "fresh_renovation": true,
-        "heating": true,
-        "central_sewerage": true,
-        "brick_material": true,
-        "central_water": true,
-        "has_photos": true,
-        "geo_area": true
-      }
-    },
-    {
-      "id": "1013150053",
-      "url": "https://krisha.kz/a/show/1013150053",
-      "title": "5-комнатный дом",
-      "price": 125000000,
-      "rooms": 5,
-      "area_m2": 195.0,
-      "plot_sotka": 6.0,
-      "floors": 1,
-      "district_line": "Турксибский р-н, Некрасова",
-      "region": "turksib",
-      "photo_url": "https://krisha-photos.kcdn.online/webp/a6/a6fb52e8-6936-4770-92d7-093db94357f1/1-800x600.jpg",
-      "lat": 43.357073965951,
-      "lon": 76.961546046346,
       "checks": {
         "rooms": true,
         "price": true,
