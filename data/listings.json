@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-04T08:06:33+05:00",
+  "generated_at": "2026-09-05T07:49:30+05:00",
   "criteria": {
     "rooms": [
       5,
@@ -19,7 +19,7 @@
     ]
   },
   "blocked_early": false,
-  "count": 29,
+  "count": 28,
   "listings": [
     {
       "id": "691165541",
@@ -707,34 +707,6 @@
       "photo_url": "https://krisha-photos.kcdn.online/webp/6e/6e1bf94d-4e28-4adf-98c7-ee8cfdf1bd74/1-800x600.jpg",
       "lat": 43.369683730595,
       "lon": 77.009117126382,
-      "checks": {
-        "rooms": true,
-        "price": true,
-        "floors": true,
-        "min_area": true,
-        "fresh_renovation": true,
-        "heating": true,
-        "central_sewerage": true,
-        "brick_material": true,
-        "central_water": true,
-        "has_photos": true,
-        "geo_area": true
-      }
-    },
-    {
-      "id": "1015106588",
-      "url": "https://krisha.kz/a/show/1015106588",
-      "title": "6-комнатный дом",
-      "price": 128000000,
-      "rooms": 6,
-      "area_m2": 195.0,
-      "plot_sotka": 6.0,
-      "floors": 1,
-      "district_line": "Турксибский р-н, Онежская",
-      "region": "turksib",
-      "photo_url": "https://krisha-photos.kcdn.online/webp/3b/3bcde9c9-2b49-4fc8-878e-89207aa534e5/1-800x600.jpg",
-      "lat": 43.357675,
-      "lon": 76.961428,
       "checks": {
         "rooms": true,
         "price": true,
