@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-05T07:49:30+05:00",
+  "generated_at": "2026-09-06T08:00:09+05:00",
   "criteria": {
     "rooms": [
       5,
@@ -19,7 +19,7 @@
     ]
   },
   "blocked_early": false,
-  "count": 28,
+  "count": 27,
   "listings": [
     {
       "id": "691165541",
@@ -218,19 +218,19 @@
       }
     },
     {
-      "id": "1015294601",
-      "url": "https://krisha.kz/a/show/1015294601",
+      "id": "1014428826",
+      "url": "https://krisha.kz/a/show/1014428826",
       "title": "6-комнатный дом",
       "price": 100000000,
       "rooms": 6,
       "area_m2": 180.0,
       "plot_sotka": 6.7,
       "floors": 2,
-      "district_line": "Медеуский р-н, Сазоновская В залоге ,",
+      "district_line": "Медеуский р-н, Сазановская",
       "region": "medeu",
-      "photo_url": "https://krisha-photos.kcdn.online/webp/3c/3c212ec8-fe7b-4948-97f0-0a4a7d8e80cf/18-800x600.jpg",
-      "lat": 43.286121482017,
-      "lon": 76.97324057141,
+      "photo_url": "https://krisha-photos.kcdn.online/webp/65/6504ceec-b17d-4039-9f0b-f966f633b66a/12-800x600.jpg",
+      "lat": 43.284537444567,
+      "lon": 76.972175210827,
       "checks": {
         "rooms": true,
         "price": true,
@@ -246,19 +246,19 @@
       }
     },
     {
-      "id": "1014428826",
-      "url": "https://krisha.kz/a/show/1014428826",
+      "id": "1015294601",
+      "url": "https://krisha.kz/a/show/1015294601",
       "title": "6-комнатный дом",
       "price": 100000000,
       "rooms": 6,
       "area_m2": 180.0,
       "plot_sotka": 6.7,
       "floors": 2,
-      "district_line": "Медеуский р-н, Сазановская",
+      "district_line": "Медеуский р-н, Сазоновская В залоге ,",
       "region": "medeu",
-      "photo_url": "https://krisha-photos.kcdn.online/webp/65/6504ceec-b17d-4039-9f0b-f966f633b66a/12-800x600.jpg",
-      "lat": 43.284537444567,
-      "lon": 76.972175210827,
+      "photo_url": "https://krisha-photos.kcdn.online/webp/3c/3c212ec8-fe7b-4948-97f0-0a4a7d8e80cf/18-800x600.jpg",
+      "lat": 43.286121482017,
+      "lon": 76.97324057141,
       "checks": {
         "rooms": true,
         "price": true,
@@ -343,34 +343,6 @@
       "photo_url": "https://krisha-photos.kcdn.online/webp/e7/e70b3bf9-aba8-43d3-82b9-4c111af4149d/1-800x600.jpg",
       "lat": 43.290346723237,
       "lon": 77.039140722577,
-      "checks": {
-        "rooms": true,
-        "price": true,
-        "floors": true,
-        "min_area": true,
-        "fresh_renovation": true,
-        "heating": true,
-        "central_sewerage": true,
-        "brick_material": true,
-        "central_water": true,
-        "has_photos": true,
-        "geo_area": true
-      }
-    },
-    {
-      "id": "1015006225",
-      "url": "https://krisha.kz/a/show/1015006225",
-      "title": "5-комнатный дом",
-      "price": 102000000,
-      "rooms": 5,
-      "area_m2": 225.0,
-      "plot_sotka": 5.0,
-      "floors": 1,
-      "district_line": "Турксибский р-н, Нурсая",
-      "region": "turksib",
-      "photo_url": "https://krisha-photos.kcdn.online/webp/e0/e04459ea-8a92-4758-837d-4ff8ee395e2a/1-800x600.jpg",
-      "lat": 43.350687,
-      "lon": 76.954367,
       "checks": {
         "rooms": true,
         "price": true,
@@ -610,6 +582,34 @@
       }
     },
     {
+      "id": "1013086127",
+      "url": "https://krisha.kz/a/show/1013086127",
+      "title": "6-комнатный дом",
+      "price": 125000000,
+      "rooms": 6,
+      "area_m2": 210.0,
+      "plot_sotka": 5.0,
+      "floors": 2,
+      "district_line": "Турксибский р-н, мкр Альмерек",
+      "region": "turksib",
+      "photo_url": "https://krisha-photos.kcdn.online/webp/6e/6e1bf94d-4e28-4adf-98c7-ee8cfdf1bd74/1-800x600.jpg",
+      "lat": 43.369683730595,
+      "lon": 77.009117126382,
+      "checks": {
+        "rooms": true,
+        "price": true,
+        "floors": true,
+        "min_area": true,
+        "fresh_renovation": true,
+        "heating": true,
+        "central_sewerage": true,
+        "brick_material": true,
+        "central_water": true,
+        "has_photos": true,
+        "geo_area": true
+      }
+    },
+    {
       "id": "1013150053",
       "url": "https://krisha.kz/a/show/1013150053",
       "title": "5-комнатный дом",
@@ -679,34 +679,6 @@
       "photo_url": "https://krisha-photos.kcdn.online/webp/9e/9ed2da3b-49d3-41c5-9317-99b2d2c20a36/1-800x600.jpg",
       "lat": 43.323875,
       "lon": 76.969872,
-      "checks": {
-        "rooms": true,
-        "price": true,
-        "floors": true,
-        "min_area": true,
-        "fresh_renovation": true,
-        "heating": true,
-        "central_sewerage": true,
-        "brick_material": true,
-        "central_water": true,
-        "has_photos": true,
-        "geo_area": true
-      }
-    },
-    {
-      "id": "1013086127",
-      "url": "https://krisha.kz/a/show/1013086127",
-      "title": "6-комнатный дом",
-      "price": 125000000,
-      "rooms": 6,
-      "area_m2": 210.0,
-      "plot_sotka": 5.0,
-      "floors": 2,
-      "district_line": "Турксибский р-н, мкр Альмерек",
-      "region": "turksib",
-      "photo_url": "https://krisha-photos.kcdn.online/webp/6e/6e1bf94d-4e28-4adf-98c7-ee8cfdf1bd74/1-800x600.jpg",
-      "lat": 43.369683730595,
-      "lon": 77.009117126382,
       "checks": {
         "rooms": true,
         "price": true,
