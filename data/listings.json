@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-27T09:18:53+05:00",
+  "generated_at": "2026-09-28T09:42:47+05:00",
   "criteria": {
     "rooms": [
       5,
@@ -582,19 +582,19 @@
       }
     },
     {
-      "id": "1015006225",
-      "url": "https://krisha.kz/a/show/1015006225",
+      "id": "1016098835",
+      "url": "https://krisha.kz/a/show/1016098835",
       "title": "5-комнатный дом",
       "price": 115000000,
       "rooms": 5,
       "area_m2": 225.0,
       "plot_sotka": 5.0,
       "floors": 1,
-      "district_line": "Турксибский р-н, Клара Цеткина",
+      "district_line": "Турксибский р-н, Клара Цеткин",
       "region": "turksib",
-      "photo_url": "https://krisha-photos.kcdn.online/webp/e0/e04459ea-8a92-4758-837d-4ff8ee395e2a/1-800x600.jpg",
-      "lat": 43.352903,
-      "lon": 76.952185,
+      "photo_url": "https://krisha-photos.kcdn.online/webp/31/31ac1081-ba90-474f-8a7a-3a79802bddd2/1-800x600.jpg",
+      "lat": 43.352785,
+      "lon": 76.952005,
       "checks": {
         "rooms": true,
         "price": true,
