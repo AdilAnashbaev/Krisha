@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-28T09:42:47+05:00",
+  "generated_at": "2026-09-29T09:51:30+05:00",
   "criteria": {
     "rooms": [
       5,
@@ -19,7 +19,7 @@
     ]
   },
   "blocked_early": false,
-  "count": 35,
+  "count": 31,
   "listings": [
     {
       "id": "1006884963",
@@ -231,34 +231,6 @@
       "photo_url": "https://krisha-photos.kcdn.online/webp/ba/baa3d825-a561-4f0e-abe3-3460cc6bbc8b/12-800x600.jpg",
       "lat": 43.3132467864,
       "lon": 76.932757103632,
-      "checks": {
-        "rooms": true,
-        "price": true,
-        "floors": true,
-        "min_area": true,
-        "fresh_renovation": true,
-        "heating": true,
-        "central_sewerage": true,
-        "brick_material": true,
-        "central_water": true,
-        "has_photos": true,
-        "geo_area": true
-      }
-    },
-    {
-      "id": "685456270",
-      "url": "https://krisha.kz/a/show/685456270",
-      "title": "6-комнатный дом",
-      "price": 98000000,
-      "rooms": 6,
-      "area_m2": 320.0,
-      "plot_sotka": 13.0,
-      "floors": 2,
-      "district_line": "",
-      "region": "besagash",
-      "photo_url": "https://krisha-photos.kcdn.online/webp/4f/4f935ffd-1467-4ea4-a881-dd446ef89a99/61-800x600.jpg",
-      "lat": 43.291073414899,
-      "lon": 77.036154439664,
       "checks": {
         "rooms": true,
         "price": true,
@@ -610,34 +582,6 @@
       }
     },
     {
-      "id": "685034345",
-      "url": "https://krisha.kz/a/show/685034345",
-      "title": "6-комнатный дом",
-      "price": 120000000,
-      "rooms": 6,
-      "area_m2": 243.0,
-      "plot_sotka": 7.0,
-      "floors": 2,
-      "district_line": "",
-      "region": "besagash",
-      "photo_url": "https://krisha-photos.kcdn.online/webp/cb/cb83b8a0-5bc7-4579-ab51-0a352ac80cbc/15-800x600.jpg",
-      "lat": 43.289954629638,
-      "lon": 77.033893884634,
-      "checks": {
-        "rooms": true,
-        "price": true,
-        "floors": true,
-        "min_area": true,
-        "fresh_renovation": true,
-        "heating": true,
-        "central_sewerage": true,
-        "brick_material": true,
-        "central_water": true,
-        "has_photos": true,
-        "geo_area": true
-      }
-    },
-    {
       "id": "1007924612",
       "url": "https://krisha.kz/a/show/1007924612",
       "title": "6-комнатный дом",
@@ -666,19 +610,19 @@
       }
     },
     {
-      "id": "1015608155",
-      "url": "https://krisha.kz/a/show/1015608155",
+      "id": "1011245801",
+      "url": "https://krisha.kz/a/show/1011245801",
       "title": "6-комнатный дом",
       "price": 125000000,
       "rooms": 6,
-      "area_m2": 170.0,
-      "plot_sotka": 11.0,
+      "area_m2": 266.0,
+      "plot_sotka": 8.0,
       "floors": 2,
-      "district_line": "Медеуский р-н, мкр Коктобе",
-      "region": "medeu",
-      "photo_url": "https://krisha-photos.kcdn.online/webp/01/01b6f5fe-35d1-4b5f-8ef5-e9b9819e1a29/1-800x600.jpg",
-      "lat": 43.257692647051,
-      "lon": 76.987564661549,
+      "district_line": "Турксибский р-н, Московская",
+      "region": "turksib",
+      "photo_url": "https://krisha-photos.kcdn.online/webp/dc/dc2a9907-0b38-48e6-9583-24f779c2a88b/1-800x600.jpg",
+      "lat": 43.353139,
+      "lon": 76.948933,
       "checks": {
         "rooms": true,
         "price": true,
@@ -834,34 +778,6 @@
       }
     },
     {
-      "id": "1011245801",
-      "url": "https://krisha.kz/a/show/1011245801",
-      "title": "6-комнатный дом",
-      "price": 125000000,
-      "rooms": 6,
-      "area_m2": 266.0,
-      "plot_sotka": 8.0,
-      "floors": 2,
-      "district_line": "Турксибский р-н, Московская",
-      "region": "turksib",
-      "photo_url": "https://krisha-photos.kcdn.online/webp/dc/dc2a9907-0b38-48e6-9583-24f779c2a88b/1-800x600.jpg",
-      "lat": 43.353139,
-      "lon": 76.948933,
-      "checks": {
-        "rooms": true,
-        "price": true,
-        "floors": true,
-        "min_area": true,
-        "fresh_renovation": true,
-        "heating": true,
-        "central_sewerage": true,
-        "brick_material": true,
-        "central_water": true,
-        "has_photos": true,
-        "geo_area": true
-      }
-    },
-    {
       "id": "1015512218",
       "url": "https://krisha.kz/a/show/1015512218",
       "title": "6-комнатный дом",
@@ -918,19 +834,19 @@
       }
     },
     {
-      "id": "1012522424",
-      "url": "https://krisha.kz/a/show/1012522424",
-      "title": "6-комнатный дом",
+      "id": "693373831",
+      "url": "https://krisha.kz/a/show/693373831",
+      "title": "5-комнатный дом",
       "price": 130000000,
-      "rooms": 6,
-      "area_m2": 350.0,
-      "plot_sotka": 8.0,
+      "rooms": 5,
+      "area_m2": 200.0,
+      "plot_sotka": 5.0,
       "floors": 2,
-      "district_line": "Медеуский р-н, мкр Алатау (ИЯФ)",
-      "region": "medeu",
-      "photo_url": "https://krisha-photos.kcdn.online/webp/9a/9a2cdad9-89cd-4cba-85d8-e34a49c1095e/22-800x600.jpg",
-      "lat": 43.355768998741,
-      "lon": 77.136706773384,
+      "district_line": "Турксибский р-н, Шмидта",
+      "region": "turksib",
+      "photo_url": "https://krisha-photos.kcdn.online/webp/08/08410113-bab0-4914-916d-b723dfcad3ff/1-800x600.jpg",
+      "lat": 43.357445870864,
+      "lon": 76.947264798832,
       "checks": {
         "rooms": true,
         "price": true,
@@ -969,34 +885,6 @@
         "central_sewerage": true,
         "brick_material": true,
         "central_water": false,
-        "has_photos": true,
-        "geo_area": true
-      }
-    },
-    {
-      "id": "693373831",
-      "url": "https://krisha.kz/a/show/693373831",
-      "title": "5-комнатный дом",
-      "price": 130000000,
-      "rooms": 5,
-      "area_m2": 200.0,
-      "plot_sotka": 5.0,
-      "floors": 2,
-      "district_line": "Турксибский р-н, Шмидта",
-      "region": "turksib",
-      "photo_url": "https://krisha-photos.kcdn.online/webp/08/08410113-bab0-4914-916d-b723dfcad3ff/1-800x600.jpg",
-      "lat": 43.357445870864,
-      "lon": 76.947264798832,
-      "checks": {
-        "rooms": true,
-        "price": true,
-        "floors": true,
-        "min_area": true,
-        "fresh_renovation": true,
-        "heating": true,
-        "central_sewerage": true,
-        "brick_material": true,
-        "central_water": true,
         "has_photos": true,
         "geo_area": true
       }
