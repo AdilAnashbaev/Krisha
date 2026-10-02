@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-01T10:13:01+05:00",
+  "generated_at": "2026-10-02T09:46:43+05:00",
   "criteria": {
     "rooms": [
       5,
@@ -19,7 +19,7 @@
     ]
   },
   "blocked_early": false,
-  "count": 36,
+  "count": 37,
   "listings": [
     {
       "id": "1006884963",
@@ -259,6 +259,34 @@
       "photo_url": "https://krisha-photos.kcdn.online/webp/4f/4f935ffd-1467-4ea4-a881-dd446ef89a99/61-800x600.jpg",
       "lat": 43.291073414899,
       "lon": 77.036154439664,
+      "checks": {
+        "rooms": true,
+        "price": true,
+        "floors": true,
+        "min_area": true,
+        "fresh_renovation": true,
+        "heating": true,
+        "central_sewerage": true,
+        "brick_material": true,
+        "central_water": true,
+        "has_photos": true,
+        "geo_area": true
+      }
+    },
+    {
+      "id": "1016057579",
+      "url": "https://krisha.kz/a/show/1016057579",
+      "title": "6-комнатный дом",
+      "price": 100000000,
+      "rooms": 6,
+      "area_m2": 180.0,
+      "plot_sotka": 6.7,
+      "floors": 2,
+      "district_line": "Медеуский р-н, САЗОНОВСКАЯ В залоге ,",
+      "region": "medeu",
+      "photo_url": "https://krisha-photos.kcdn.online/webp/af/af9e821b-683c-4d4e-a94e-f791758d5842/1-800x600.jpg",
+      "lat": 43.287203,
+      "lon": 76.973753,
       "checks": {
         "rooms": true,
         "price": true,
@@ -554,6 +582,34 @@
       }
     },
     {
+      "id": "691977032",
+      "url": "https://krisha.kz/a/show/691977032",
+      "title": "5-комнатный дом",
+      "price": 110000000,
+      "rooms": 5,
+      "area_m2": 180.0,
+      "plot_sotka": 4.0,
+      "floors": 1,
+      "district_line": "Турксибский р-н, Энгелса",
+      "region": "turksib",
+      "photo_url": "https://krisha-photos.kcdn.online/webp/6d/6dc979db-1bd0-4b20-acda-52438cbd9562/19-800x600.jpg",
+      "lat": 43.353302,
+      "lon": 76.961859,
+      "checks": {
+        "rooms": true,
+        "price": true,
+        "floors": true,
+        "min_area": true,
+        "fresh_renovation": true,
+        "heating": true,
+        "central_sewerage": true,
+        "brick_material": true,
+        "central_water": true,
+        "has_photos": true,
+        "geo_area": true
+      }
+    },
+    {
       "id": "696625667",
       "url": "https://krisha.kz/a/show/696625667",
       "title": "6-комнатный дом",
@@ -638,19 +694,19 @@
       }
     },
     {
-      "id": "1015608155",
-      "url": "https://krisha.kz/a/show/1015608155",
+      "id": "1007924612",
+      "url": "https://krisha.kz/a/show/1007924612",
       "title": "6-комнатный дом",
       "price": 125000000,
       "rooms": 6,
-      "area_m2": 170.0,
-      "plot_sotka": 11.0,
+      "area_m2": 220.0,
+      "plot_sotka": 4.0,
       "floors": 2,
-      "district_line": "Медеуский р-н, мкр Коктобе",
+      "district_line": "",
       "region": "medeu",
-      "photo_url": "https://krisha-photos.kcdn.online/webp/01/01b6f5fe-35d1-4b5f-8ef5-e9b9819e1a29/1-800x600.jpg",
-      "lat": 43.257692647051,
-      "lon": 76.987564661549,
+      "photo_url": "https://krisha-photos.kcdn.online/webp/32/321ab509-cc33-41ab-a40b-200689b4bef8/19-800x600.jpg",
+      "lat": 43.27968020263,
+      "lon": 77.007773939481,
       "checks": {
         "rooms": true,
         "price": true,
@@ -666,19 +722,19 @@
       }
     },
     {
-      "id": "1007924612",
-      "url": "https://krisha.kz/a/show/1007924612",
+      "id": "1015608155",
+      "url": "https://krisha.kz/a/show/1015608155",
       "title": "6-комнатный дом",
       "price": 125000000,
       "rooms": 6,
-      "area_m2": 220.0,
-      "plot_sotka": 4.0,
+      "area_m2": 170.0,
+      "plot_sotka": 11.0,
       "floors": 2,
-      "district_line": "",
+      "district_line": "Медеуский р-н, мкр Коктобе",
       "region": "medeu",
-      "photo_url": "https://krisha-photos.kcdn.online/webp/32/321ab509-cc33-41ab-a40b-200689b4bef8/19-800x600.jpg",
-      "lat": 43.27968020263,
-      "lon": 77.007773939481,
+      "photo_url": "https://krisha-photos.kcdn.online/webp/01/01b6f5fe-35d1-4b5f-8ef5-e9b9819e1a29/1-800x600.jpg",
+      "lat": 43.257692647051,
+      "lon": 76.987564661549,
       "checks": {
         "rooms": true,
         "price": true,
@@ -875,34 +931,6 @@
       "photo_url": "https://krisha-photos.kcdn.online/webp/a6/a6fb52e8-6936-4770-92d7-093db94357f1/1-800x600.jpg",
       "lat": 43.357073965951,
       "lon": 76.961546046346,
-      "checks": {
-        "rooms": true,
-        "price": true,
-        "floors": true,
-        "min_area": true,
-        "fresh_renovation": true,
-        "heating": true,
-        "central_sewerage": true,
-        "brick_material": true,
-        "central_water": true,
-        "has_photos": true,
-        "geo_area": true
-      }
-    },
-    {
-      "id": "1015512218",
-      "url": "https://krisha.kz/a/show/1015512218",
-      "title": "6-комнатный дом",
-      "price": 125000000,
-      "rooms": 6,
-      "area_m2": 260.0,
-      "plot_sotka": 7.5,
-      "floors": 2,
-      "district_line": "",
-      "region": "besagash",
-      "photo_url": "https://krisha-photos.kcdn.online/webp/b5/b5cb99e0-df71-492e-9071-b432c023489f/1-800x600.jpg",
-      "lat": 43.300548738933,
-      "lon": 77.032543369323,
       "checks": {
         "rooms": true,
         "price": true,
