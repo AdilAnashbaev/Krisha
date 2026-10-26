@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-25T08:32:31+05:00",
+  "generated_at": "2026-10-26T08:52:22+05:00",
   "criteria": {
     "rooms": [
       5,
@@ -19,7 +19,7 @@
     ]
   },
   "blocked_early": false,
-  "count": 35,
+  "count": 30,
   "listings": [
     {
       "id": "1006884963",
@@ -241,34 +241,6 @@
         "central_sewerage": true,
         "brick_material": true,
         "central_water": true,
-        "has_photos": true,
-        "geo_area": true
-      }
-    },
-    {
-      "id": "1016698591",
-      "url": "https://krisha.kz/a/show/1016698591",
-      "title": "6-комнатный дом",
-      "price": 98000000,
-      "rooms": 6,
-      "area_m2": 235.6,
-      "plot_sotka": 6.0,
-      "floors": 2,
-      "district_line": "",
-      "region": "besagash",
-      "photo_url": "https://krisha-photos.kcdn.online/webp/d8/d8494477-7128-4c9a-862d-51a13240d005/17-800x600.jpg",
-      "lat": 43.304105,
-      "lon": 77.028889,
-      "checks": {
-        "rooms": true,
-        "price": true,
-        "floors": true,
-        "min_area": true,
-        "fresh_renovation": true,
-        "heating": true,
-        "central_sewerage": true,
-        "brick_material": true,
-        "central_water": false,
         "has_photos": true,
         "geo_area": true
       }
@@ -582,62 +554,6 @@
       }
     },
     {
-      "id": "1013749217",
-      "url": "https://krisha.kz/a/show/1013749217",
-      "title": "6-комнатный дом",
-      "price": 120000000,
-      "rooms": 6,
-      "area_m2": 185.0,
-      "plot_sotka": 5.7,
-      "floors": 2,
-      "district_line": "Турксибский р-н, Гете",
-      "region": "turksib",
-      "photo_url": "https://krisha-photos.kcdn.online/webp/a1/a11e6012-b02f-44f3-a817-f5627b7f1738/1-800x600.jpg",
-      "lat": 43.339391,
-      "lon": 76.969172,
-      "checks": {
-        "rooms": true,
-        "price": true,
-        "floors": true,
-        "min_area": true,
-        "fresh_renovation": true,
-        "heating": true,
-        "central_sewerage": true,
-        "brick_material": true,
-        "central_water": false,
-        "has_photos": true,
-        "geo_area": true
-      }
-    },
-    {
-      "id": "685034345",
-      "url": "https://krisha.kz/a/show/685034345",
-      "title": "6-комнатный дом",
-      "price": 120000000,
-      "rooms": 6,
-      "area_m2": 243.0,
-      "plot_sotka": 7.0,
-      "floors": 2,
-      "district_line": "",
-      "region": "besagash",
-      "photo_url": "https://krisha-photos.kcdn.online/webp/cb/cb83b8a0-5bc7-4579-ab51-0a352ac80cbc/15-800x600.jpg",
-      "lat": 43.289954629638,
-      "lon": 77.033893884634,
-      "checks": {
-        "rooms": true,
-        "price": true,
-        "floors": true,
-        "min_area": true,
-        "fresh_renovation": true,
-        "heating": true,
-        "central_sewerage": true,
-        "brick_material": true,
-        "central_water": true,
-        "has_photos": true,
-        "geo_area": true
-      }
-    },
-    {
       "id": "1016076143",
       "url": "https://krisha.kz/a/show/1016076143",
       "title": "6-комнатный дом",
@@ -651,34 +567,6 @@
       "photo_url": "https://krisha-photos.kcdn.online/webp/10/10b75518-4e6a-4e3a-a5fe-7da94c438d8d/1-800x600.jpg",
       "lat": 43.277804,
       "lon": 76.971579,
-      "checks": {
-        "rooms": true,
-        "price": true,
-        "floors": true,
-        "min_area": true,
-        "fresh_renovation": true,
-        "heating": true,
-        "central_sewerage": true,
-        "brick_material": true,
-        "central_water": true,
-        "has_photos": true,
-        "geo_area": true
-      }
-    },
-    {
-      "id": "1015844526",
-      "url": "https://krisha.kz/a/show/1015844526",
-      "title": "6-комнатный дом",
-      "price": 123000000,
-      "rooms": 6,
-      "area_m2": 210.0,
-      "plot_sotka": 5.0,
-      "floors": 2,
-      "district_line": "Медеуский р-н, Тюленина",
-      "region": "medeu",
-      "photo_url": "https://krisha-photos.kcdn.online/webp/b3/b3677e68-4a7c-42dd-a458-9b7402c0eb40/47-800x600.jpg",
-      "lat": 43.277798,
-      "lon": 76.971759,
       "checks": {
         "rooms": true,
         "price": true,
@@ -819,34 +707,6 @@
       "photo_url": "https://krisha-photos.kcdn.online/webp/a6/a6fb52e8-6936-4770-92d7-093db94357f1/1-800x600.jpg",
       "lat": 43.357073965951,
       "lon": 76.961546046346,
-      "checks": {
-        "rooms": true,
-        "price": true,
-        "floors": true,
-        "min_area": true,
-        "fresh_renovation": true,
-        "heating": true,
-        "central_sewerage": true,
-        "brick_material": true,
-        "central_water": true,
-        "has_photos": true,
-        "geo_area": true
-      }
-    },
-    {
-      "id": "1015286968",
-      "url": "https://krisha.kz/a/show/1015286968",
-      "title": "6-комнатный дом",
-      "price": 125000000,
-      "rooms": 6,
-      "area_m2": 270.0,
-      "plot_sotka": 5.5,
-      "floors": 2,
-      "district_line": "Турксибский р-н, мкр Жас Канат, Микрорайон",
-      "region": "turksib",
-      "photo_url": "https://krisha-photos.kcdn.online/webp/1f/1f43e2ef-607a-4094-8c76-fd2bfea8e1b4/1-800x600.jpg",
-      "lat": 43.326308,
-      "lon": 76.980356,
       "checks": {
         "rooms": true,
         "price": true,
