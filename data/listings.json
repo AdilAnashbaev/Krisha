@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-23T11:38:32+05:00",
+  "generated_at": "2026-11-24T13:02:34+05:00",
   "criteria": {
     "rooms": [
       5,
@@ -18,7 +18,7 @@
       "besagash-dzerzhinskoe"
     ]
   },
-  "blocked_early": true,
+  "blocked_early": false,
   "count": 0,
   "listings": []
 }
